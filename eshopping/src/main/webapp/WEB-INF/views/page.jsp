@@ -31,8 +31,8 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<!-- Bootstrap Theme -->
+<link href="${css}/bootswatch.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 		<!-- Page Content -->
 
 		<div class="content">
-			
+
 			<!-- Loading the home content -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
@@ -64,6 +64,12 @@
 			<!-- Load only when user clicks contact -->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
+			</c:if>
+
+			<!-- Load only when user clicks all products or category product -->
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 
