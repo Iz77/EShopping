@@ -7,16 +7,16 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li id="about"><a href="${contextRoot}/about">About</a></li>
-
-				<li id="contact"><a href="${contextRoot}/contact">Contact</a></li>
-
-				<li id="listProducts"><a
-					href="${contextRoot}/show/all/products">View Products</a></li>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				 
+				<li id="home" class="nav-item active"><a class="nav-link" href="${contextRoot}/home">Home
+						<span class="sr-only">(current)</span>
+				</a></li> 
+				
+				<li id ="about" class="nav-item"><a class="nav-link" href="${contextRoot}/about">About</a></li>
+				<li id ="contact" class="nav-item"><a class="nav-link" href="${contextRoot}/contact">Contact</a></li>
+				<li id ="listProducts" class="nav-item"><a class="nav-link" href="${contextRoot}/show/all/products">View Products</a></li>
 			</ul>
 		</div>
 	</div>

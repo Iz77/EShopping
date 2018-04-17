@@ -24,15 +24,13 @@
 
 <script>
 	window.menu = '${title}';
-
-	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap Theme -->
-<link href="${css}/bootswatch.css" rel="stylesheet">
+<!-- Bootswatch lux theme -->
+<link href="${css}/bootswatch-simplex-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -40,12 +38,10 @@
 </head>
 
 <body>
-
 	<div class="wrapper">
 
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
-
 
 		<!-- Page Content -->
 
@@ -65,28 +61,31 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-
-			<!-- Load only when user clicks all products or category product -->
-			<c:if
-				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+			
+			<!-- Load only when user clicks all products or category products -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+
 		</div>
+
+		<!-- Footer -->
 
 		<!-- Footer comes here -->
 		<%@include file="./shared/footer.jsp"%>
 
-
-		<!-- jQuery -->
+		<!-- JQuery -->
 		<script src="${js}/jquery.min.js"></script>
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 
-		<!-- Self coded javascript -->
+		<!-- Self coded javasript -->
 		<script src="${js}/myapp.js"></script>
+
 	</div>
 
 </body>
 
 </html>
+

@@ -14,7 +14,7 @@
 	<context:component-scan
 		base-package="net.iz.eshopping.controller" />
 	<context:component-scan
-		base-package="net.iz.eshoppingbackend.daoimpl" />
+		base-package="net.iz.eshoppingbackend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
