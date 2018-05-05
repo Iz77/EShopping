@@ -1,28 +1,27 @@
+
 <div>
 
 <!-- Footer comes here -->
 <%@include file="../../shared/footer.jsp"%>
 
-<!-- JQuery -->
-<script src="${js}/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="${js}/jquery.js"></script>
+
 <script src="${js}/jquery.validate.js"></script>
 
-<!-- Popper -->
-<script src="${js}/popper.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="${js}/bootstrap.min.js"></script>
 
-<!-- Bootstrap core JavaScript -->
-<script src="${js}/bootstrap.bundle.min.js"></script>
-
-<!-- Datatables plugins -->
+<!-- DataTable Plugin -->
 <script src="${js}/jquery.dataTables.js"></script>
 
-<!-- Datatables bootstrap script -->
+<!-- DataTable Bootstrap Script -->
 <script src="${js}/dataTables.bootstrap.js"></script>
 
 <!-- DataTable Bootstrap Script -->
 <script src="${js}/bootbox.min.js"></script>
 
-<!-- Self coded javasript -->
+<!-- Self coded javascript -->
 <script src="${js}/myapp.js"></script>
 
 </div>
