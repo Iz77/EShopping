@@ -73,6 +73,7 @@ CREATE TABLE cart_line (
 	buying_price DECIMAL(10,2),
 	is_available boolean,
 	CONSTRAINT fk_cartline_product_id FOREIGN KEY (product_id ) REFERENCES product (id),
+	CONSTRAINT fk_cartline_cart_id FOREIGN KEY (cart_id ) REFERENCES cart (id),
 	CONSTRAINT pk_cartline_id PRIMARY KEY (id)
 );
 
@@ -112,31 +113,31 @@ INSERT INTO category (name, description,image_url,is_active) VALUES ('Laptop', '
 INSERT INTO category (name, description,image_url,is_active) VALUES ('Television', 'This is description for Television category!', 'CAT_2.png', true);
 INSERT INTO category (name, description,image_url,is_active) VALUES ('Mobile', 'This is description for Mobile category!', 'CAT_3.png', true);
 
--- adding three users 
+-- adding four users 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Isidore', 'Rusumba', 'ADMIN', true, 'admin', 'ir@gmail.com', '8888888888');
+VALUES ('Isidore', 'Rusumba', 'ADMIN', true, '$2a$10$1cdDsTwbmPP5u83nZBxFkeXdk.3JmptKnSuOj82hT79JPnLycrfFO', 'ir@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Samuel', 'Mugisho', 'SUPPLIER', true, '12345', 'sm@gmail.com', '9999999999');
+VALUES ('Samuel', 'Mugisho', 'SUPPLIER', true, '$2a$10$3If3tUWB.zoHVHBfeXwpSuh/eFS6NMC6nQ5QgyiQCzc9oUSsLsI1q', 'sm@gmail.com', '9999999999');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ilda', 'Amani', 'SUPPLIER', true, '12345', 'ia@gmail.com', '7777777777');
+VALUES ('Ilda', 'Amani', 'SUPPLIER', true, '$2a$10$3If3tUWB.zoHVHBfeXwpSuh/eFS6NMC6nQ5QgyiQCzc9oUSsLsI1q', 'ia@gmail.com', '7777777777');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Jeanne', 'Mbonigaba', 'USER', true, '12345', 'jm@gmail.com', '7777777777');
+VALUES ('Jeanne', 'Mbonigaba', 'USER', true, '$2a$10$3If3tUWB.zoHVHBfeXwpSuh/eFS6NMC6nQ5QgyiQCzc9oUSsLsI1q', 'jm@gmail.com', '7777777777');
 
 -- adding five products
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDABC123DEFX', 'iPhone 5s', 'apple', 'This is one of the best phone available in the market right now!', 18000, 5, true, 3, 2, 0, 0 );
+VALUES ('PRDEC23248E64', 'iPhone X', 'Apple', 'This is the best apple phone available on the market right now!', 999, 5, true, 3, 2, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDDEF123DEFX', 'Samsung s7', 'samsung', 'A smart phone by samsung!', 32000, 2, true, 3, 3, 0, 0 );
+VALUES ('PRDC45317523A', 'Galaxy S9 Plus', 'Samsung', 'A smart phone by samsung!', 800, 2, true, 3, 1, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDPQR123WGTX', 'Google Pixel', 'google', 'This is one of the best android smart phone available in the market right now!', 57000, 5, true, 3, 2, 0, 0 );
+VALUES ('PRD6BDDBB5B15', 'Pixel2 XL', 'Google', 'This is one of the best android smart phone available on the market right now!', 850, 5, true, 3, 1, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDMNO123PQRX', ' Macbook Pro', 'apple', 'This is one of the best laptops available in the market right now!', 54000, 3, true, 1, 2, 0, 0 );
+VALUES ('PRD792A64DFEF', ' Macbook Pro 15', 'Apple', 'This is one of the best laptops available on the market right now!', 2000, 3, true, 1, 2, 0, 0 );
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('PRDABCXYZDEFX', 'Dell Latitude E6510', 'dell', 'This is one of the best laptop series from dell that can be used!', 48000, 5, true, 1, 3, 0, 0 );
+VALUES ('PRD43238BB7A3', 'XPS 13', 'Dell', 'This is one of the best laptop series from dell that can be used!', 1000, 5, true, 1, 3, 0, 0 );
 
 -- adding a supplier correspondece address
 INSERT INTO address( user_id, address_line_one, address_line_two, city, state, country, postal_code, is_billing, is_shipping) 

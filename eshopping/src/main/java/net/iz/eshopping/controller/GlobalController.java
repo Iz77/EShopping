@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import net.iz.eshopping.model.UserModel;
 import net.iz.eshoppingbackend.dao.UserDAO;
 import net.iz.eshoppingbackend.dto.User;
+import net.iz.eshoppingbackend.dto.Cart;
 
 @ControllerAdvice
 public class GlobalController {

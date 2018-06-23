@@ -28,19 +28,19 @@
 						<div class="carousel-inner">
 							
 							<div class="item active">
-								<img class="slide-image" src="${images}/banner1.jpg"
+								<img class="slide-image" src="${images}/banner5.jpeg"
 									alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="${images}/banner2.jpg"
+								<img class="slide-image" src="${images}/banner6.jpeg"
 									alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="${images}/banner3.jpg"
+								<img class="slide-image" src="${images}/banner7.jpeg"
 									alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="${images}/banner4.jpg"
+								<img class="slide-image" src="${images}/banner8.jpeg"
 									alt="">
 							</div>
 						</div>
@@ -67,11 +67,11 @@
                 	
                     <div class="col-sm-4" ng-repeat="product in pCtrl.mvProducts">                    	
                         <div class="thumbnail">
-                            <img ng-src="${images}/{{product.code}}.jpg" alt="{{product.name}}" class="landingImg">
+                            <img ng-src="${images}/{{product.code}}.jpeg" alt="{{product.name}}" class="landingImg">
                             <h5>{{product.name}}</h5>
                             <hr/>
                             <div class="caption">
-                                <h4 class="pull-right">&#8377; {{product.unitPrice}}</h4>
+                                <h4 class="pull-right">&#36; {{product.unitPrice}}</h4>
                                 <p>{{product.description}}</p>
                                 <a ng-href="${contextRoot}/show/{{product.id}}/product" class="btn btn-primary pull-right">View</a>
                             </div>
@@ -97,7 +97,7 @@
                 	
                     <div class="col-sm-4" ng-repeat="product in pCtrl.mpProducts">                    	
                         <div class="thumbnail">
-                            <img ng-src="${images}/{{product.code}}.jpg" alt="{{product.name}}" class="landingImg">
+                            <img ng-src="${images}/{{product.code}}.jpeg" alt="{{product.name}}" class="landingImg">
                             <h5>{{product.name}}</h5>
                             <hr/>
                             <div class="caption">

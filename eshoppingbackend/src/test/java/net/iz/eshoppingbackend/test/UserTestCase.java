@@ -1,25 +1,25 @@
 package net.iz.eshoppingbackend.test;
 
-//import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
-//import org.junit.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-//import net.iz.eshoppingbackend.dao.UserDAO;
-//import net.iz.eshoppingbackend.dto.Address;
-//import net.iz.eshoppingbackend.dto.Cart;
-//import net.iz.eshoppingbackend.dto.User;
+import net.iz.eshoppingbackend.dao.UserDAO;
+import net.iz.eshoppingbackend.dto.Address;
+import net.iz.eshoppingbackend.dto.Cart;
+import net.iz.eshoppingbackend.dto.User;
 
 
 
 public class UserTestCase {
 
 	private static AnnotationConfigApplicationContext context;
-//	private static UserDAO userDAO;
-//	private User user = null;
-//	private Cart cart = null;
-//	private Address address = null;
+	private static UserDAO userDAO;
+	private User user = null;
+	private Cart cart = null;
+	private Address address = null;
 	
 	
 	@BeforeClass
@@ -28,7 +28,7 @@ public class UserTestCase {
 		context.scan("net.iz.eshoppingbackend");
 		context.refresh();
 		
-//		userDAO = (UserDAO) context.getBean("userDAO");
+		userDAO = (UserDAO) context.getBean("userDAO");
 	}
 	
 

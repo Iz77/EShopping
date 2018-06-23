@@ -1,5 +1,6 @@
 package net.iz.eshoppingbackend.dto;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -11,14 +12,18 @@ import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+@Component
 @Entity
-public class Product {
+public class Product implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	
-	//Private fields
+	// private fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -44,18 +49,20 @@ public class Product {
 	private int purchases;
 	private int views;
 	
+	
 	@Transient
 	private MultipartFile file;
-	
+			
 	public MultipartFile getFile() {
 		return file;
 	}
+
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
 
 
-	//default constructor
+	// default constructor
 	public Product() {
 		
 		this.code = "PRD" + UUID.randomUUID().toString().substring(26).toUpperCase();
@@ -63,7 +70,7 @@ public class Product {
 	}
 	
 	
-	//Setters and Getters
+	// setters and getters	
 	public int getId() {
 		return id;
 	}
@@ -124,27 +131,31 @@ public class Product {
 	public void setSupplierId(int supplierId) {
 		this.supplierId = supplierId;
 	}
+
 	public int getPurchases() {
 		return purchases;
 	}
+
 	public void setPurchases(int purchases) {
 		this.purchases = purchases;
 	}
+
 	public int getViews() {
 		return views;
 	}
+
 	public void setViews(int views) {
 		this.views = views;
 	}
 
-
+	
+	// toString for debugging
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
 				+ description + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", active=" + active
 				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId + ", purchases=" + purchases + ", views="
 				+ views + "]";
-	}	
-	
-
+	}
 }
+

@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import net.iz.eshoppingbackend.dao.CartLineDAO;
-import net.iz.eshoppingbackend.dao.ProductDAO;
+//import net.iz.eshoppingbackend.dao.ProductDAO;
 import net.iz.eshoppingbackend.dao.UserDAO;
 import net.iz.eshoppingbackend.dto.Cart;
 import net.iz.eshoppingbackend.dto.CartLine;
@@ -23,7 +23,7 @@ public class CartLineTestCase {
 	
 	
 	private static CartLineDAO cartLineDAO;
-	private static ProductDAO productDAO;
+	//private static ProductDAO productDAO;
 	private static UserDAO userDAO;
 	
 	
@@ -36,7 +36,7 @@ public class CartLineTestCase {
 		context.scan("net.iz.eshoppingbackend");
 		context.refresh();
 		cartLineDAO = (CartLineDAO)context.getBean("cartLineDAO");
-		productDAO = (ProductDAO)context.getBean("productDAO");
+		//productDAO = (ProductDAO)context.getBean("productDAO");
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	

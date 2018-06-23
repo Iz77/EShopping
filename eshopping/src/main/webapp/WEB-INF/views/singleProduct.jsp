@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <div class="container">
 
 	<!-- Breadcrumb -->
@@ -35,8 +35,9 @@
 			</div>
 		
 		</div>
+	
 		
-				<!-- Display the product description -->	
+		<!-- Display the product description -->	
 		<div class="col-xs-12 col-sm-8">
 		
 			<h3>${product.name}</h3>
@@ -45,8 +46,10 @@
 			<p>${product.description}</p>
 			<hr/>
 			
-			<h4>Price: <strong> &#36; ${product.unitPrice} /-</strong></h4>
+			<h4>Price: <strong> &#36; ${product.unitPrice} </strong></h4>
 			<hr/>
+			
+			
 			
 			<c:choose>
 				

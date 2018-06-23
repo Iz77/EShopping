@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 
+
 @ControllerAdvice
 public class GlobalDefaultExceptionHandler {
 

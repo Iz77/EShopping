@@ -13,12 +13,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
+
 public class FileUtil {
 
-	private static final String ABS_PATH = "D:/Isi/Documents/Sem 3/Project 2/EShopping/eshopping/src/main/webapp/assets/images";
+	private static final String ABS_PATH = "D:/Isi/Documents/Sem 3/Project/Online Shopping/EShopping/eshopping/src/main/webapp/assets/images";
 	private static String REAL_PATH = null;
 	private static final Logger logger = LoggerFactory.getLogger(FileUtil.class);
-
 	public static boolean uploadFile(HttpServletRequest request, MultipartFile file, String code) 
 	{				
 		// get the real server path
@@ -37,8 +37,8 @@ public class FileUtil {
 		
 		try {
 			//transfer the file to both the location
-			file.transferTo(new File(REAL_PATH + code + ".jpg"));
-			file.transferTo(new File(ABS_PATH + code + ".jpg"));
+			file.transferTo(new File(REAL_PATH + code + ".jpeg"));
+			file.transferTo(new File(ABS_PATH + code + ".jpeg"));
 		}
 		catch(IOException ex) {
 			ex.printStackTrace();
@@ -51,8 +51,8 @@ public class FileUtil {
 		REAL_PATH = request.getSession().getServletContext().getRealPath("/assets/images/");
 	
 		String imageURL = "http://placehold.it/640X480?text=No Image";
-		String destinationServerFile = REAL_PATH + code + ".jpg";
-		String destinationProjectFile = REAL_PATH + code + ".jpg";
+		String destinationServerFile = REAL_PATH + code + ".jpeg";
+		String destinationProjectFile = REAL_PATH + code + ".jpeg";
 				
 		try {
 			URL url = new URL(imageURL);				

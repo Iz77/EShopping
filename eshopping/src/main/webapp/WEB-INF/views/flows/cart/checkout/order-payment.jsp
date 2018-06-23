@@ -13,11 +13,11 @@
 							<h3>${cartLine.product.name}</h3>
 							<hr/>
 							<h4>Quantity -${cartLine.productCount}</h4>
-							<h5>Buying Price - &#36; ${cartLine.buyingPrice}/-</h5>							
+							<h5>Buying Price - &#36; ${cartLine.buyingPrice}</h5>							
 						</div>						
 						<hr/>
 						<div class="text-right">
-							<h3>Grand Total - &#36; ${cartLine.total}/-</h3>
+							<h3>Grand Total - &#36; ${cartLine.total}</h3>
 						</div>						
 					</div>
 					</c:forEach>

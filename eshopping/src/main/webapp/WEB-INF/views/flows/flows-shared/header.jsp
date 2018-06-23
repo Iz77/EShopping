@@ -19,7 +19,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Online Shopping - Membership</title>
+<title>Sax Electronics - Membership</title>
 
 <script>
 
@@ -58,9 +58,12 @@
 	        <div class="container">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
-	                <a class="navbar-brand" href="${flowExecutionUrl}&_eventId=home">Online Shopping</a>
+	                <a class="navbar-brand" href="${flowExecutionUrl}&_eventId=home">Sax Electronics</a>
 	            </div>
 			</div>
 		</nav>
-			
-	</div>
+		
+		
+		<!-- Page Content -->
+
+		<div class="content">

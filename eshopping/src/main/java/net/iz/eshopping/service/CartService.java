@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import net.iz.eshopping.model.UserModel;
 import net.iz.eshoppingbackend.dao.CartLineDAO;
 import net.iz.eshoppingbackend.dao.ProductDAO;
+import net.iz.eshoppingbackend.dao.UserDAO;
 import net.iz.eshoppingbackend.dto.Cart;
 import net.iz.eshoppingbackend.dto.CartLine;
 import net.iz.eshoppingbackend.dto.Product;

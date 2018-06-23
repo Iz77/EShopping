@@ -14,13 +14,14 @@ import net.iz.eshoppingbackend.dto.Product;
 @Repository("productDAO")
 @Transactional
 public class ProductDAOImpl implements ProductDAO {
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	/*
 	 * SINGLE
 	 * */
+	
 	@Override
 	public Product get(int productId) {
 		try {			
@@ -33,10 +34,11 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 		return null;
 	}
-	
+
 	/*
 	 * LIST
 	 * */
+	
 	@Override
 	public List<Product> list() {
 		return sessionFactory
@@ -44,7 +46,7 @@ public class ProductDAOImpl implements ProductDAO {
 					.createQuery("FROM Product" , Product.class)
 						.getResultList();
 	}
-	
+
 	/*
 	 * INSERT
 	 * */
@@ -61,7 +63,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}		
 		return false;
 	}
-	
+
 	/*
 	 * UPDATE
 	 * */
@@ -78,13 +80,14 @@ public class ProductDAOImpl implements ProductDAO {
 		}		
 		return false;		
 	}
+
 	
 	/*
 	 * DELETE
 	 * */
 	@Override
 	public boolean delete(Product product) {
-try {
+		try {
 			
 			product.setActive(false);
 			// call the update method
@@ -95,7 +98,7 @@ try {
 		}		
 		return false;			
 	}
-		
+
 	@Override
 	public List<Product> listActiveProducts() {
 		String selectActiveProducts = "FROM Product WHERE active = :active";
@@ -115,7 +118,7 @@ try {
 						.setParameter("active", true)
 						.setParameter("categoryId",categoryId)
 							.getResultList();
-		}
+	}
 
 	@Override
 	public List<Product> getLatestActiveProducts(int count) {
@@ -126,6 +129,21 @@ try {
 							.setFirstResult(0)
 							.setMaxResults(count)
 								.getResultList();					
+	}
+
+	@Override
+	public List<Product> getProductsByParam(String param, int count) {
+		
+		String query = "FROM Product WHERE active = true ORDER BY " + param + " DESC";
+		
+		return sessionFactory
+					.getCurrentSession()
+					.createQuery(query,Product.class)
+					.setFirstResult(0)
+					.setMaxResults(count)
+					.getResultList();
+					
+		
 	}
 
 }
